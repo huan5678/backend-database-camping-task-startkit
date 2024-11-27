@@ -436,7 +436,7 @@ GROUP BY user_id
 ),
 "used_credits" AS (
 SELECT user_id,
-  COUNT(purchased_credits) as total_used
+COUNT(*) as total_used
 FROM "COURSE_BOOKING"
 WHERE user_id = (
     SELECT id
